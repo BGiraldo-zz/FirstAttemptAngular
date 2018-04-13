@@ -1,0 +1,25 @@
+<form class="example-form">
+
+
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput name="user" placeholder="user" [(ngModel)]="customer.user" >
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput name="password" placeholder="password" [(ngModel)]="customer.password">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <div class="button-row">
+    <button mat-raised-button color="primary" (click)="onLogin()" >Login</button>
+    <a mat-raised-button routerLink="/home">Signin</a>
+  </div>
+
+</form>
