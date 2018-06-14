@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'First complete app';
+  events: string[] = [];
+  opened: boolean;
 }

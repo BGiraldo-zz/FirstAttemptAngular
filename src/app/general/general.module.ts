@@ -1,22 +1,24 @@
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { LeftMenuComponent } from './left-menu/left-menu.component';
-import { BodyComponent } from './body/body.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
+import { FooterComponent } from './footer/footer.component';
+
+import { SigninComponent } from './signin/signin.component';
+import { LoginComponent } from './login/login.component';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
   MatButtonModule,
   MatCardModule,
   MatMenuModule,
-  MatToolbarModule,
   MatIconModule,
-  MatFormFieldModule,
   MatInputModule,
   MatStepperModule,
   MatTooltipModule,
@@ -28,8 +30,10 @@ import {
   MatSidenavModule,
   MatExpansionModule,
   MatNativeDateModule,
+  MatRadioModule,
+  MatSelectModule
 } from '@angular/material';
-import { LoginComponent } from './login/login.component';
+
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -43,7 +47,6 @@ import { RouterModule } from '@angular/router';
     MatCardModule,
     MatInputModule,
     MatMenuModule,
-    MatToolbarModule,
     MatIconModule,
     MatFormFieldModule,
     CommonModule,
@@ -59,21 +62,24 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatExpansionModule,
     MatNativeDateModule,
-    RouterModule
+    MatRadioModule,
+    MatSelectModule,
+    RouterModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatToolbarModule
   ],
   declarations: [
-    HeaderComponent,
     FooterComponent,
-    LeftMenuComponent,
-    BodyComponent,
-    LoginComponent
+    LoginComponent,
+    SigninComponent
   ],
   exports: [
-    HeaderComponent,
     FooterComponent,
-    LeftMenuComponent,
-    BodyComponent,
+    SigninComponent,
     LoginComponent
-  ]
+  ],
+  providers: []
 })
 export class GeneralModule { }
